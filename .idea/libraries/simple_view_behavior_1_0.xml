@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="simple-view-behavior-1.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/13daca354ccecdcf901c62e0f54697d3f8e8bbca/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/13daca354ccecdcf901c62e0f54697d3f8e8bbca/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.zoonref/simple-view-behavior/1.0/f1264381d083a580931b05f20094d054634d9bb8/simple-view-behavior-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

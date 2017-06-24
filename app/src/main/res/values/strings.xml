@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Platzigram</string>
+    <string name="title_activity_reference">ReferenceActivity</string>
+
+    <string name="hint_username">User Name</string>
+    <string name="hint_password">Password</string>
+    <string name="button_login">Login</string>
+    <string name="dont_have_account">Don\'t have account?, \u0020</string>
+    <string name="create_here">create account</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_user">User</string>
+    <string name="hint_confirm_password">Confirm password</string>
+    <string name="button_createaccount">Join Us</string>
+    <string name="toolbar_tittle_createaccount">Create account</string>
+    <string name="usernamer_card">Rapero echizo</string>
+    <string name="firsrword_card">Ago</string>
+    <string name="timecard_card">4 days</string>
+    <string name="likenumber_card">10 likes</string>
+    <string name="tab_search">Search</string>
+    <string name="tab_home">Home</string>
+    <string name="tab_profile">My account</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="secondword_detail">Like</string>
+    <string name="titleimagedetail">\"Todos Copas a la calle\"</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis voluptas libero unde natus facilis neque deserunt adipisci optio officiis iste quam, eum nulla nihil consequuntur aut, consequatur commodi temporibus quas!</string>
+    <string name="transitionname_picture">transitionnamepicture</string>
+    <string name="searchhinttext">write to search</string>
+</resources>

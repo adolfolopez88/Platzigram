@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- colores 500 de material desing son primarios https://material.io/guidelines/style/color.html
+    https://www.materialpalette.com/
+    -->
+    <color name="colorPrimary">#673AB7</color>
+    <!-- colores 700 de material desing son primarios dack -->
+    <color name="colorPrimaryDark">#512DA8</color>
+    <!-- colores letra A de material desing son acentuacion -->
+    <color name="colorAccent">#64DD17</color>
+
+    <color name="EditTextColorWhite">#ffffff</color>
+    <color name="EditTextColorBlack">#000000</color>
+    <color name="backgroundtext_card">#53292929</color>
+</resources>

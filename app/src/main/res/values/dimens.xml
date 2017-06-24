@@ -1,0 +1,38 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="edittext_textsize_login">20sp</dimen>
+    <dimen name="padding_horizoltal_login">32dp</dimen>
+    <dimen name="textsize_donthaveaccount">16sp</dimen>
+    <dimen name="activity_vertical_margin">20dp</dimen>
+    <dimen name="activity_horizontal_margin">20dp</dimen>
+    <dimen name="edittext_margin_createAccount">10dp</dimen>
+    <dimen name="height_cardview">200dp</dimen>
+    <dimen name="cornerraadius_cardview">6dp</dimen>
+    <dimen name="textsize_username_card">25sp</dimen>
+    <dimen name="textsize_firstword_card">15sp</dimen>
+    <dimen name="timeCard_marginleft_card">5dp</dimen>
+    <dimen name="like_margintop_card">10dp</dimen>
+    <dimen name="bottombar_height">70dp</dimen>
+    <dimen name="appbar_layout_height">256dp</dimen>
+    <dimen name="textsize_usernamedetail">25sp</dimen>
+    <dimen name="textsize_likenumberdetail">15sp</dimen>
+    <dimen name="marginleft_secondword">7dp</dimen>
+    <dimen name="height_divider">1dp</dimen>
+    <dimen name="paddingtop_tetleimagedetail">20dp</dimen>
+    <dimen name="padding_horizoltal_textcontentdetail">35dp</dimen>
+    <dimen name="textsize_usernameprofile">30dp</dimen>
+    <dimen name="dimen_circleImageprofile">160dp</dimen>
+    <dimen name="margintop_circleimageprofile">30dp</dimen>
+    <dimen name="elevation_circleimageprofile">10dp</dimen>
+    <dimen name="limitY_circleImage">-206dp</dimen>
+    <dimen name="margintoptoolbar_circleimageprofile">5dp</dimen>
+    <dimen name="width_circleimagetoolbar">40dp</dimen>
+    <dimen name="textsize_usernametoolbarprofile">18dp</dimen>
+    <dimen name="marginleft_usernametoolbarprofile">72dp</dimen>
+    <dimen name="margintop_usernametoolbarprofile">-100dp</dimen>
+    <dimen name="limitY_usernametoolbarprofile">-250dp</dimen>
+    <dimen name="margintoptargety_usernamertoolbarprofile">-5dp</dimen>
+    <dimen name="marginbottom_usernameprofile">16dp</dimen>
+    <dimen name="marginleft_recyclerviewsearch">5dp</dimen>
+</resources>
+
