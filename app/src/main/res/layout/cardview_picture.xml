@@ -16,7 +16,7 @@
             android:id="@+id/imageCard"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_cardview"
-            android:background="@drawable/image_prueba"
+            android:background="@drawable/image_example"
             android:scaleType="centerCrop"
             android:transitionName="@string/transitionname_picture"/>
 

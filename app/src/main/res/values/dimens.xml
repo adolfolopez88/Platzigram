@@ -34,5 +34,7 @@
     <dimen name="margintoptargety_usernamertoolbarprofile">-5dp</dimen>
     <dimen name="marginbottom_usernameprofile">16dp</dimen>
     <dimen name="marginleft_recyclerviewsearch">5dp</dimen>
+    <dimen name="margin_cv_search">3dp</dimen>
+    <dimen name="paddingbottom_llsearch">3dp</dimen>
 </resources>
 

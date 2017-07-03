@@ -10,18 +10,29 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.adolfo.platzigram.R;
 import com.example.adolfo.platzigram.adapter.PictureAdapterRecyclerView;
 import com.example.adolfo.platzigram.model.Picture;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.crash.FirebaseCrash;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class ProfileFragment extends Fragment {
 
+
+    private static final String TAG = "ProfileFragment" ;
+    private CircleImageView civAvatarProfile;
+    private TextView tvDetailProfile;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -31,19 +42,16 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        FirebaseCrash.log("Init " + TAG);
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         showToolbar("", false, view);
 
-        RecyclerView pictureRecycler = (RecyclerView) view.findViewById(R.id.pictureProfileRecycler);
+        tvDetailProfile = (TextView) view.findViewById(R.id.tvDetailProfile);
+        civAvatarProfile = (CircleImageView) view.findViewById(R.id.civAvatarProfile);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        LinearLayoutManager linearLayoutManager= new LinearLayoutManager(getContext());
-        linearLayoutManager.setOrientation(linearLayoutManager.VERTICAL);
-
-        pictureRecycler.setLayoutManager(linearLayoutManager);
-        PictureAdapterRecyclerView pictureAdapterRecyclerView = new PictureAdapterRecyclerView(buildPictures(), R.layout.cardview_picture, getActivity() );
-
-        pictureRecycler.setAdapter(pictureAdapterRecyclerView);
+        if(user.getPhotoUrl() != null)
+            Picasso.with(getContext()).load(user.getPhotoUrl()).into(civAvatarProfile);
 
         // Inflate the layout for this fragment
         return view;
@@ -56,12 +64,5 @@ public class ProfileFragment extends Fragment {
         ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
     }
 
-    public ArrayList<Picture> buildPictures(){
-        ArrayList<Picture> pictures = new ArrayList<>();
-        pictures.add(new Picture("https://upload.wikimedia.org/wikipedia/commons/1/1e/Stonehenge.jpg", "Adolfo Lopez", "2 dias", "3 Likes" ));
-        pictures.add(new Picture("https://upload.wikimedia.org/wikipedia/commons/1/1e/Stonehenge.jpg", "Adolfo Lopez", "3 dias", "3 Likes" ));
-        pictures.add(new Picture("https://upload.wikimedia.org/wikipedia/commons/1/1e/Stonehenge.jpg", "Adolfo Lopez", "2 dias", "3 Likes" ));
-        pictures.add(new Picture("https://upload.wikimedia.org/wikipedia/commons/1/1e/Stonehenge.jpg", "Adolfo Lopez", "4 dias", "3 Likes" ));
-        return pictures;
-    }
+
 }

@@ -5,16 +5,27 @@ package com.example.adolfo.platzigram.model;
  */
 
 public class Picture {
+    private String postId;
     private String picture;
     private String userName;
     private String time;
     private String like_number = "0 dias";
 
-    public Picture(String picture, String userName, String time, String like_number) {
+    public Picture(String postId,String picture, String userName, String time, String like_number) {
+        this.postId = postId;
         this.picture = picture;
         this.userName = userName;
         this.time = time;
         this.like_number = like_number;
+    }
+
+
+    public String getPostId() {
+        return postId;
+    }
+
+    public void setPostId(String postId) {
+        this.postId = postId;
     }
 
     public String getPicture() {

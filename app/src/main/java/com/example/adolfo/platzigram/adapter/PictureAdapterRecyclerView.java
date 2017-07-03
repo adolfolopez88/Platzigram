@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.example.adolfo.platzigram.R;
 import com.example.adolfo.platzigram.model.Picture;
-import com.example.adolfo.platzigram.view.PictureDetailActivity;
+import com.example.adolfo.platzigram.post.view.PictureDetailActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -44,26 +44,32 @@ public class PictureAdapterRecyclerView extends  RecyclerView.Adapter<PictureAda
     @Override
     public void onBindViewHolder(PictureViewHolder holder, int position) {
         final Picture picture = pictures.get(position);
-        holder.userNameCard.setText(picture.getUserName());
-        holder.timeCard.setText(picture.getTime());
-        holder.likeNumberCard.setText(picture.getLike_number());
-        Picasso.with(activity).load(picture.getPicture()).into(holder.imageCard);
+        if(holder.userNameCard != null)
+            holder.userNameCard.setText(picture.getUserName());
+        if(holder.timeCard != null)
+            holder.timeCard.setText(picture.getTime());
+        if(holder.likeNumberCard != null)
+            holder.likeNumberCard.setText(picture.getLike_number());
+        if(holder.imageCard != null) {
+            Picasso.with(activity).load(picture.getPicture()).into(holder.imageCard);
 
-        holder.imageCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(activity, PictureDetailActivity.class);
+            holder.imageCard.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(activity, PictureDetailActivity.class);
+                    intent.putExtra("postId", picture.getPostId());
 
-                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
-                    Explode explode = new Explode();
-                    explode.setDuration(1000);
-                    activity.getWindow().setExitTransition(explode);
-                    activity.startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(activity, view, activity.getString( R.string.transitionname_picture)).toBundle());
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        Explode explode = new Explode();
+                        explode.setDuration(1000);
+
+                        activity.getWindow().setExitTransition(explode);
+                        activity.startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(activity, view, activity.getString(R.string.transitionname_picture)).toBundle());
+                    } else
+                        activity.startActivity(intent);
                 }
-                else
-                    activity.startActivity(intent);
-            }
-        });
+            });
+        }
     }
 
     @Override
